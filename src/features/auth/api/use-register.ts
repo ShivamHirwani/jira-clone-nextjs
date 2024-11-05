@@ -1,3 +1,5 @@
+import { toast } from "sonner";
+
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { InferRequestType, InferResponseType } from "hono";
 
@@ -19,8 +21,12 @@ export const useRegister = () => {
       return await response.json();
     },
     onSuccess: () => {
+      toast.success("Signed up.");
       router.refresh();
       queryClient.invalidateQueries({ queryKey: ["current"] });
+    },
+    onError: () => {
+      toast.error("Failed to sign up.");
     },
   });
 
