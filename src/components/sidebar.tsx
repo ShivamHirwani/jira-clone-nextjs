@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { DottedSeparator } from "./dotted-separator";
 import { Navigation } from "./navigation";
+import { WorkspaceSwitcher } from "./workspace-switcher";
 
 export const Sidebar = () => {
   return (
@@ -13,6 +14,8 @@ export const Sidebar = () => {
         </Link>
         <p className="font-bold text-lg">Jira Clone</p>
       </div>
+      <DottedSeparator className="my-4" />
+      <WorkspaceSwitcher />
       <DottedSeparator className="my-4" />
       <Navigation />
     </aside>
