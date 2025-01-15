@@ -24,7 +24,7 @@ export async function createSessionClient() {
     },
     get databases() {
       return new Databases(client);
-    }
+    },
   };
 }
 
@@ -37,6 +37,9 @@ export async function createAdminClient() {
   return {
     get account() {
       return new Account(client);
+    },
+    get users() {
+      return new Users(client);
     },
   };
 }
