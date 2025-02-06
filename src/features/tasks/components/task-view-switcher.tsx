@@ -11,11 +11,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { DataFilters } from "./data-filters";
 
+import { DataKanban } from "./data-kanban";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";
 
 import { useGetTasks } from "../api/use-get-tasks";
-import { useCreateTaskModel } from "../hooks/use-create-task-modal";
+import { useCreateTaskModal } from "../hooks/use-create-task-modal";
 import { useTaskFilters } from "../hooks/use-task-filters";
 
 export const TaskViewSwitcher = () => {
@@ -31,7 +32,7 @@ export const TaskViewSwitcher = () => {
     dueDate,
   });
 
-  const { open } = useCreateTaskModel();
+  const { open } = useCreateTaskModal();
 
   return (
     <Tabs
@@ -70,7 +71,7 @@ export const TaskViewSwitcher = () => {
               <DataTable columns={columns} data={tasks?.documents ?? []} />
             </TabsContent>
             <TabsContent value="kanban" className="mt-0">
-              {JSON.stringify(tasks)}
+              <DataKanban data={tasks?.documents ?? []} />
             </TabsContent>
             <TabsContent value="calendar" className="mt-0">
               {JSON.stringify(tasks)}
