@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# jira-clone-nextjs
+
+![GitHub repo size](https://img.shields.io/github/repo-size/evanch98/jira-clone-nextjs)
+![GitHub stars](https://img.shields.io/github/stars/evanch98/jira-clone-nextjs?style=social)
+![GitHub forks](https://img.shields.io/github/forks/evanch98/jira-clone-nextjs?style=social)
+
+<br />
+November, 2024. <br />
+
+Full-stack Jira Clone project built by using Next JS 14, React, TypeScript, Shadcn UI, Tailwind CSS, Hono, and Appwrite.
+
+## Features
+
+- Create workspaces and invite team members seamlessly.
+- Collaborate with team members and track projects and tasks.
+- Manage tasks in data table, kanban, and calendar views effortlessly.
+- Responsive design with TailwindCSS.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will help you set up and run the project on your local machine for development and testing purposes.
+
+1. **Clone the repository:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/evanch98/jira-clone-nextjs.git
+cd your-repo-name
+```
+
+2. **Install the required dependencies:**
+
+```bash
+bun install
+```
+
+3. **Configure environmental variables:**
+   Create a `.env.local` file in the project root and set the necessary environment variables.
+
+```
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+NEXT_PUBLIC_APPWRITE_PROJECT=
+
+NEXT_PUBLIC_APPWRITE_DATABASE_ID=
+NEXT_PUBLIC_APPWRITE_WORKSPACES_ID=
+NEXT_PUBLIC_APPWRITE_MEMBERS_ID=
+NEXT_PUBLIC_APPWRITE_PROJECTS_ID=
+NEXT_PUBLIC_APPWRITE_TASKS_ID=
+NEXT_PUBLIC_APPWRITE_IMAGES_BUCKET_ID=
+
+NEXT_APPWRITE_KEY=
+```
+
+4. **Run the development server:**
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. **Start building and customizing your Miro Clone!**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Appwrite](https://appwrite.io/)
+- [Shadcn UI](https://ui.shadcn.com/)
+- [Hono](https://hono.dev/)
 
-## Learn More
+## Acknowledgements
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [@hello-pangea/dnd](https://www.npmjs.com/package/@hello-pangea/dnd)
+- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority)
+- [clsx](https://www.npmjs.com/package/clsx)
+- [date-fns](https://www.npmjs.com/package/date-fns)
+- [lucide-react](https://www.npmjs.com/package/lucide-react)
+- [nuqs](https://www.npmjs.com/package/nuqs)
+- [react-big-calendar](https://www.npmjs.com/package/react-big-calendar)
+- [react-day-picker](https://www.npmjs.com/package/react-day-picker)
+- [react-icons](https://www.npmjs.com/package/react-icons)
+- [sonner](https://www.npmjs.com/package/sonner)
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge)
+- [zod](https://www.npmjs.com/package/zod)
