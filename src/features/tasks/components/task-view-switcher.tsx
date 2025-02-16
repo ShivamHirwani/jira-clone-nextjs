@@ -1,21 +1,21 @@
 "use client";
 
-import { useCallback } from "react";
 import { LoaderIcon, PlusIcon } from "lucide-react";
 import { useQueryState } from "nuqs";
+import { useCallback } from "react";
 
+import { useProjectId } from "@/features/projects/hooks/use-project-id";
 import { useWorkspaceId } from "@/features/workspaces/hooks/use-workspace-id";
 
 import { DottedSeparator } from "@/components/dotted-separator";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import { DataFilters } from "./data-filters";
-
+import { columns } from "./columns";
 import { DataCalendar } from "./data-calendar";
+import { DataFilters } from "./data-filters";
 import { DataKanban } from "./data-kanban";
 import { DataTable } from "./data-table";
-import { columns } from "./columns";
 
 import { useGetTasks } from "../api/use-get-tasks";
 import { useCreateTaskModal } from "../hooks/use-create-task-modal";
@@ -35,9 +35,10 @@ export const TaskViewSwitcher = ({
   const { mutate: bulkUpdate } = useBulkUpdateTasks();
 
   const workspaceId = useWorkspaceId();
+  const paramProjectId = useProjectId();
   const { data: tasks, isLoading: isLoadingTasks } = useGetTasks({
     workspaceId,
-    projectId,
+    projectId: paramProjectId || projectId,
     assigneeId,
     status,
     dueDate,
