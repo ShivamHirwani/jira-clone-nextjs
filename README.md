@@ -58,7 +58,13 @@ NEXT_APPWRITE_KEY=
 bun dev
 ```
 
-5. **Start building and customizing your Miro Clone!**
+5. **Start building and customizing your Jira Clone!**
+
+6. **Demo Account**
+
+   Email: evan@mail.com
+
+   Password: Evan12345678
 
 ## Technologies Used
 
