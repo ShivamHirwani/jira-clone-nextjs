@@ -6,6 +6,7 @@ import { DATABASE_ID, MEMBERS_ID, WORKSPACES_ID } from "@/config";
 export const getWorkspaces = async () => {
   const { account, databases } = await createSessionClient();
 
+  console.log();
   const user = await account.get();
 
   const members = await databases.listDocuments(DATABASE_ID, MEMBERS_ID, [
